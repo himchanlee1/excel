@@ -25,6 +25,44 @@ def update_excel(file_path, waybill_number, shipment_weight, pickup_date, ready_
     book.save(file_path)
     book.close()
 
+def read_pickup_date(file_path='C:\Python\bill\코반스 픽업요청서 양식.xlsx'):
+    book = load_workbook(file_path)
+    sheet = book.active
+
+    date = str(sheet['K5'].value)
+    return date
+
+def read_excel(file_path):
+    # House Air Bill #, Expected Date of delivery 불러오기
+    book = load_workbook(file_path)
+    sheet = book.active
+
+    billNum = sheet['D5'].value
+    date = list(str(sheet['K5'].value).split('-'))
+    print('date:', date)
+    yy = date[0]
+    mm = date[1]
+    dd = date[2]
+
+    mm_dict = {
+        '01': 'JAN',
+        '02': 'FEB',
+        '03': 'MAR',
+        '04': 'APR',
+        '05': 'MAY',
+        '06': 'JUN',
+        '07': 'JUL',
+        '08': 'AUG',
+        '09': 'SEP',
+        '10': 'OCT',
+        '11': 'NOV',
+        '12': 'DEC',
+    }
+
+    return billNum, '{}{}{}'.format(dd, mm_dict[mm], yy)
+
+
+
 def main():
     # 이미지와 엑셀 파일 경로를 직접 지정합니다.
     image_path = r'C:\Python\bill\waybill.jpg'
@@ -45,5 +83,6 @@ def main():
     except Exception as e:
         print(f"에러가 발생했습니다: {e}")
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
+
