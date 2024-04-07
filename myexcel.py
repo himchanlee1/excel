@@ -23,6 +23,7 @@ def update_excel(file_path, waybill_number, shipment_weight, pickup_date, ready_
     sheet['M5'] = format_date(blood_collection_date)
     
     book.save(file_path)
+    print("엑셀 파일이 성공적으로 업데이트 되었습니다.")
     book.close()
 
 def read_pickup_date(file_path='C:\Python\bill\코반스 픽업요청서 양식.xlsx'):
@@ -63,25 +64,7 @@ def read_excel(file_path):
 
 
 
-def main():
-    # 이미지와 엑셀 파일 경로를 직접 지정합니다.
-    image_path = r'C:\Python\bill\waybill.jpg'
-    file_path = r'C:\Python\bill\코반스 픽업요청서 양식.xlsx'
-
-    shipment_weight, waybill_number = extract_shipment_info(image_path)
-    
-    pickup_date = input("픽업 날짜를 YY.MM.DD 형식으로 입력하세요: ")
-    ready_time = input("준비된 시간이 오전인가요 오후인가요? (오전/오후로 입력): ")
-    blood_collection_date = input("채혈 날짜를 YY.MM.DD 형식으로 입력하세요: ")
-
-    try:
-        update_excel(file_path, waybill_number, shipment_weight, pickup_date, ready_time, blood_collection_date)
-
-        print('saved waybill:', waybill_number)
-
-        print("엑셀 파일이 성공적으로 업데이트 되었습니다.")
-    except Exception as e:
-        print(f"에러가 발생했습니다: {e}")
+ 
 
 # if __name__ == "__main__":
 #     main()

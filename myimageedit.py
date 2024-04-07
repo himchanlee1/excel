@@ -3,7 +3,7 @@ from datetime import datetime
 
 
 
-def imageEdit(img_path, bill, date):
+def imageEdit(bill, date, img_path='bill/invoice.png'):
     # 이미지를 로드합니다.
     image_path = r'{}'.format(img_path)  # 로드할 이미지의 경로 (invoice)
     image = cv2.imread(image_path)

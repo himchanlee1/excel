@@ -61,6 +61,6 @@ email = '본인이메일주소'
 path='bill/코반스 픽업요청서 양식.xlsx'
 
 # 네이버의 경우 server='smtp.naver.com'
-send_mail(send_from=email, send_to=['수신자이메일주소'],
-          subject='{} 삼성서울병원 픽업 문의드립니다.'.format(read_pickup_date(file_path=path)), message=f'<h1>연구 진행 위해 픽업 문의 드립니다.', files=[path],
-          mtype='html', server='smtp.naver.com', username=email, password=pw)
+# # send_mail(send_from=email, send_to=['수신자이메일주소'],
+#           subject='{} 삼성서울병원 픽업 문의드립니다.'.format(read_pickup_date(file_path=path)), message=f'연구 진행 위해 픽업 문의 드립니다.', files=[path],
+#           mtype='html', server='smtp.naver.com', username=email, password=pw)
