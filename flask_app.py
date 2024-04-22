@@ -22,6 +22,9 @@ def hello_world():
             "outputs": [{
                 "simpleText": {
                     "text": "root url입니다. 서버가 돌아가고 있습니다."
+                }, 
+                "fixedNewText":{
+                    "newtext": "자동으로 업로드 됨을 알 수 있습니다."
                 }
             }]
         }
