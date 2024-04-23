@@ -182,7 +182,7 @@
                 "sha256:0c127d8b2f4865f59ae9cb8aafcd60b5c70f3241ebd66f7defad7c4ab90126c9",
                 "sha256:28575580c6ebdaf4505b22c6256a2b9de86b316dc63ba9e93abde3d78dfdbcf2"
             ],
-            "markers": "python_version >= '3.10'",
+            "markers": "python_version >= '3.9'",
             "version": "==3.3"
         },
         "ninja": {
@@ -244,7 +244,7 @@
                 "sha256:f870204a840a60da0b12273ef34f7051e98c3b5961b61b0c2c1be6dfd64fbcd3",
                 "sha256:ffa75af20b44f8dba823498024771d5ac50620e6915abac414251bd971b4529f"
             ],
-            "markers": "python_version >= '3.10'",
+            "markers": "python_version >= '3.9'",
             "version": "==1.26.4"
         },
         "opencv-python": {
@@ -499,7 +499,7 @@
                 "sha256:f9a8db6c52f8d0e1474ea8320d7b8db442b4d6baa29dd0acbd02f8a49572f18a",
                 "sha256:fce619a6d84fe40c1208fa579b646e93ce13ef0afc3652a23e9782b2c183291a"
             ],
-            "markers": "python_version >= '3.10'",
+            "markers": "python_version >= '3.9'",
             "version": "==0.23.2"
         },
         "scipy": {
